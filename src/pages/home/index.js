@@ -1,10 +1,10 @@
 import React from 'react'
-import { HeaderWraper, HeaderContent } from './style'
+import Header from '../../views/header'
 function Home() {
   return (
-    <HeaderWraper>
-      <HeaderContent></HeaderContent>
-    </HeaderWraper>
+    <div>
+      <Header />
+    </div>
   )
 }
 
