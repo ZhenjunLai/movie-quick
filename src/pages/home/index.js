@@ -1,9 +1,10 @@
 import React from 'react'
+import { HeaderWraper, HeaderContent } from './style'
 function Home() {
   return (
-    <div className="home">
-      <h1> this is home page</h1>
-    </div>
+    <HeaderWraper>
+      <HeaderContent></HeaderContent>
+    </HeaderWraper>
   )
 }
 
