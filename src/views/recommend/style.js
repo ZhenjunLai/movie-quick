@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-
-export const HomeWrap = styled.div`
+export const RecommendWrap = styled.div`
   width: 100%;
-  height: auto;
+  height: 400px;
+  display: flex;
   justify-content: center;
   align-items: center;
 `

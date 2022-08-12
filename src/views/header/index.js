@@ -10,8 +10,8 @@ function Header() {
           alt="fangfang movie"
         ></img>
         <Nav>
-          {navList.map((item) => (
-            <div className="nav-item">
+          {navList.map((item, index) => (
+            <div className="nav-item" key={index}>
               <span>{item.name}</span>
               {item.isShowIcon ? <i className="iconfont icon-arrow"></i> : ''}
             </div>

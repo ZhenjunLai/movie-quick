@@ -49,4 +49,4 @@ const navList = [
   },
 ]
 
-export { navList }
+export default navList

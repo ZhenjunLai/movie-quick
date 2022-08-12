@@ -20,10 +20,10 @@ export const Nav = styled.div`
   display: flex;
   align-items: center;
   .nav-item {
-    margin-left: 20px;
+    margin-left: 24px;
 
     .iconfont {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 `
@@ -49,7 +49,7 @@ export const NavInput = styled.div`
     background: #f5f5f5;
   }
   .iconfont {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 `
 
@@ -63,6 +63,6 @@ export const HisLogin = styled.div`
   }
 
   .iconfont {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 `
