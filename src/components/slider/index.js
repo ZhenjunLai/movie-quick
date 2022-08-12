@@ -9,6 +9,23 @@ function Slider(props) {
     left: `${-step * 1080}px`,
     transition: `all ${50}ms linear`,
   })
+  const handleClickArrow = (direction) => {
+    setStep((step) => {
+      if ((direction = 'left')) {
+        step--
+        if (step < 0) {
+          setStep(sliderList.length - 1)
+        }
+      } else if (direction === 'right') {
+        step++
+        if (step > sliderList.length - 1) {
+          setStep(0)
+        }
+      }
+      return step
+    })
+    setSwiperBoxStyle({ ...swiperBoxStyle, left: `${-step * 1080}px` })
+  }
   useEffect(() => {
     let swiperTimer = null
     if (autoplay) {
@@ -36,14 +53,20 @@ function Slider(props) {
         {sliderList.map((item, index) => {
           return (
             <div className="swiper-item" key={index}>
-              <img src={item.imgURL} alt="recommend" />
+              <img src={item.backupImg} alt="recommend" />
             </div>
           )
         })}
       </div>
       <div className="swiper-arrow">
-        <div className="iconfont icon-xiangzuojiantou"></div>
-        <div className="iconfont icon-xiangyoujiantou"></div>
+        <div
+          className="iconfont icon-xiangzuojiantou"
+          onClick={() => handleClickArrow('left')}
+        ></div>
+        <div
+          className="iconfont icon-xiangyoujiantou"
+          onClick={() => handleClickArrow('right')}
+        ></div>
       </div>
 
       <div className="swiper-focus">

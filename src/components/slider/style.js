@@ -9,6 +9,16 @@ export const SliderContainer = styled.div`
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
+
+    .swiper-item {
+      width: 1080px;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+      }
+    }
   }
   .swiper-arrow {
     position: absolute;
@@ -30,7 +40,7 @@ export const SliderContainer = styled.div`
     right: 60px;
 
     .active {
-      background: pink !important;
+      background: orange !important;
     }
   }
 
